@@ -1,0 +1,423 @@
+:root {
+    --primary: #ca435e;
+    --secondary: #ba6930;
+    --dark: #222831;
+    --darkgrey: #393E46;
+    --light: #EEEEEE;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #00000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+header.navbar-container {
+    width: 100%;
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0000003c;
+    backdrop-filter: blur(10px) saturate(100%) brightness(90%);
+    box-shadow: 0 2px 8px var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+header.navbar-container .nav-list ul {
+    display: flex;
+    gap: 2rem;
+}
+
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+header.navbar-container .nav-list li a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+header.navbar-container .nav-list li a.active {
+    color: var(--primary);
+    border-color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+header .social-media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .social-media a {
+    text-decoration: none;
+    color: var(--primary);
+    background-color: var(--dark);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+header .social-media a:hover {
+    background-color: var(--dark);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+header .social-media a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    padding: 0 8rem 3rem 8rem;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+main .hero {
+    width: 100%;
+    padding: 7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+main .hero .intro {
+    flex: 1 1;
+}
+
+main .hero .intro span {
+    color: var(--darkgrey);
+    font-weight: 700;
+}
+
+main .hero .intro h1 {
+    margin: 0;
+    font-size: 3.8rem;
+    font-weight: 900;
+    text-align: left;
+    color: var(--light);
+    line-height: 4rem;
+}
+
+main .hero .intro h1 span {
+    background: linear-gradient(135deg, var(--primary) 20%, var(--secondary) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+main .hero .intro p {
+    color: var(--light);
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+main .hero .picture {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border: 4px dashed var(--light);
+}
+
+main .hero .picture img {
+    width: 100%;
+    user-select: none;
+}
+
+main .content .hero .intro .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+a#downloadcv {
+    background: linear-gradient(135deg, var(--primary) 20%, var(--secondary) 100%);
+    padding: 0.8rem;
+    border: none;
+    outline: 2px solid var(--primary);
+    color: var(--light);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
+}
+
+a#downloadcv:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 var(--primary);
+}
+
+button#quickInfo { 
+    background-color: transparent;
+    border: none;
+    outline: 2px solid var(--primary);
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease-in-out;
+}
+
+button#quickInfo:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    box-shadow: 0 0 10px var(--primary);
+    cursor: pointer;
+}
+
+main .content article {
+    padding: 6rem 0;
+}
+
+main .content article h2{
+    color: var(--primary);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+main .content #about p {
+    color: var(--light);
+    text-align: justify;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+main .content #projects .project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+main .content #projects .project {
+    margin-inline: 0;
+}
+
+main .content #projects .project img {
+    width: 100%;
+    border-radius: 10px;
+    user-select: none;
+}
+
+main .content #projects .project figcaption h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--light);
+}
+
+main .content #projects .project figcaption p {
+    font-size: 1rem;
+    color: var(--light);
+    text-align: justify;
+    margin: 0;
+}
+
+main aside {
+    position: fixed;
+    padding: 0 1rem;
+    inset-block: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--dark);
+    border-left: 1px solid var(--darkgrey);
+    box-shadow: 0 0 8px 0 #00000050;
+    overflow-y: auto;
+    direction: rtl;
+    z-index: 10000;
+    transition: transform 0.3s ease-in-out;
+}
+
+main aside.close {
+    transform: translateX(101%);
+}
+
+main aside.open {
+    transform: translateX(0%);
+}
+
+main aside header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    direction: ltr;
+}
+
+main aside header button {
+    background-color: var(--darkgrey);
+    border: 2px solid transparent;
+    color: var(--light);
+    padding: 0.5rem 0.6rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+main aside header button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 8px 0 var(--primary);
+}
+
+main aside header h1 {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+main aside .aside-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    direction: ltr;
+}
+
+main aside .aside-content figure {
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    border-radius: 50%;
+    border: 3px dashed var(--light);
+    overflow: hidden;
+}
+
+main aside .aside-content figure img {
+    width: 100%;
+}
+
+main aside article h2{
+    color: var(--primary);
+    margin: 0;
+}
+
+main aside article p {
+    color: var(--light);
+    text-align: justify;
+}
+
+main aside article.projects ul {
+    margin-left: 1rem;
+}
+
+main aside article.projects li {
+    color: var(--light);
+    list-style-type: disc;
+}
+
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary) 20%, var(--secondary) 100%);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: var(--light);
+    font-weight: 500;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 1080px) {
+    main{
+        padding: 0 4rem;
+    }
+    main .hero {
+        flex-direction: column;
+        padding: 2rem 0 4.5rem 0;
+    }
+    main .hero .picture {
+        order: -1;
+        width: 250px;
+        height: 250px;
+    }
+
+    header.navbar-container {
+        gap: 1rem;
+    }
+    main aside {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main .hero .intro h1 {
+        font-size: 2.65rem;
+        line-height: 3rem;
+    }
+    main .content .hero .intro .buttons {
+        gap: 1rem;
+    }
+    main {
+        padding: 0 1rem;
+    }
+    header.navbar-container .social-media {
+        order: -1;
+    }
+    main aside {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    main .hero .intro p {
+        width: 85%;
+    }
+    main aside {
+        width: 45%;
+    }
+}
