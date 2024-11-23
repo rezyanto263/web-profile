@@ -156,12 +156,17 @@ main .hero .picture {
     height: 350px;
     object-fit: cover;
     object-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 4px dashed var(--light);
 }
 
 main .hero .picture img {
-    width: 100%;
+    width: 95%;
+    height: 95%;
     user-select: none;
+    border-radius: 50%;
 }
 
 main .content .hero .intro .buttons {
@@ -249,6 +254,10 @@ main .content #projects .project img {
     user-select: none;
 }
 
+main .content #projects .project figcaption a {
+    text-decoration-color: #ca435e;
+}
+
 main .content #projects .project figcaption h3 {
     font-size: 2rem;
     margin: 0;
@@ -331,10 +340,18 @@ main aside .aside-content figure {
     border-radius: 50%;
     border: 3px dashed var(--light);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 main aside .aside-content figure img {
-    width: 100%;
+    width: 95%;
+    height: 95%;
+    user-select: none;
+    border-radius: 50%;
 }
 
 main aside article h2{
